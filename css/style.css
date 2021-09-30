@@ -1,88 +1,87 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body{
+    margin: 0%;
+    padding-left: 0%;
+    background-color: #d1d1d1;
+
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-body{
-    background-color: black;
-    display: flex;
-    
-    min-height: 100vh;
-    flex-wrap: wrap;
+h1{
+    text-align: center;
+    font-family: 'montserrat';
+    font-size: 25px;
+    color: blue;
+    position: absolute;
 }
 
 .contenedor{
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+}
+
+.btn{
+    margin: 10px;
+    padding: 10px 20px;
+    font-family: 'montserrat';
+    font-size: 20px;
+    color: #4080aa;
+    background: none;
+    position: relative;
+    transition: all 0.6s;
+    position: relative;
+    transition: all 0.6s;
+}
+
+.btn:hover{
+    color: #fff;
+}
+
+.btn::before{
+    content: "";
+    background: #4080aa;
+    position: absolute;
+    transition: all 0.6s;
+    z-index: -1;
+}
+
+.btn1::before, .btn2::before{
+    top: 0;
+    width: 0;
+    height: 100%;
+}
+
+/* Boton 1*/
+.btn1::before{
+    left: 0;
+}
+
+.btn1:hover::before, .btn2:hover::before{
     width: 100%;
 }
 
-.cuadrado{
-    width: 100px;
-    height: 100px;
-    background-color: violet;
+/* boton 2*/
+.btn2::before{
+    right: 0;
 }
 
-.rectangulo{
-    width: 200px;
-    height: 100px;
-    background-color: greenyellow;
+.btn3::before, .btn4::before{
+    right: 0;
+    width: 100%;
+    height: 0;
 }
 
-.circulo{
-    width: 100px;
-    height: 100px;
-    background-color: blueviolet;
-    border-radius: 50%;
+/* Boton 3*/
+.btn3::before{
+    top: 0;
 }
 
-.ovalo{
-    width: 200px;
-    height: 100px;
-    background-color: lightgreen;
-    border-radius: 50%;
+.btn3:hover::before, .btn4:hover::before{
+    height: 100%;
 }
 
-.medio-circulo{
-    width: 200px;
-    height: 100px;
-    background-color: mediumvioletred;
-    border-radius: 50%;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.figura{
-    width: 200px;
-    height: 100px;
-    background-color: white;
-    border-top-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-}
-
-.triangulo{
-    border-top: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid red;
-    border-left: 50px solid transparent;
-}
-
-.paralelogramo{
-    width: 200px;
-    height: 100px;
-    border-top: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid turquoise;
-    border-left: 50px solid transparent;    
-}
-
-.rombo{
-    width: 70px;
-    height: 70px;
-    background-color: orangered;
-    transform: rotate(45deg) skew(10deg, 10deg);
+/* Boton 4*/
+.btn4::before{
+    bottom: 0;
 }
